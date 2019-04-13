@@ -2,7 +2,7 @@ defmodule ExChatoidWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", ExChatoidWeb.RoomChannel
+  channel "room:*", ExChatoidWeb.RoomChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
