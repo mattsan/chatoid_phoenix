@@ -1,4 +1,4 @@
-port module Main exposing (..)
+port module Chat exposing (..)
 
 import Browser
 import Html exposing (..)
@@ -39,7 +39,7 @@ init _ =
   )
 
 decodePosts =
-  (field "data" (list (map2 Post (field "posted_at" int) (field "item" string))))
+  (field "data" (Json.Decode.list (map2 Post (field "posted_at" int) (field "item" string))))
 
 port postItem : String -> Cmd msg
 port received : (Post -> msg) -> Sub msg
