@@ -12,7 +12,7 @@ channel.join()
 
 document.addEventListener('DOMContentLoaded', () => {
   const element = document.getElementById('elm-chat')
-  const chat = Chat.Elm.Main.init({ node: element })
+  const chat = Chat.Elm.Chat.init({ node: element })
 
   chat.ports.postItem.subscribe(item =>
     channel.push("post_item", { item })
